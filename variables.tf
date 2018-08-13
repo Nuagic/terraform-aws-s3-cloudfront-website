@@ -20,6 +20,12 @@ variable "allowed_ips" {
   default     = []
 }
 
+variable "allowed_iam_account_rw" {
+  type        = "list"
+  description = "A list of userId (starting by AIDAxxxxxxxx) or Role (starting by AIROxxxx) that a rw access to the S3 bucket"
+  default     = []
+}
+
 variable "web_acl_id" {
   type        = "string"
   description = "WAF Web ACL ID to attach to the CloudFront distribution, optional"
