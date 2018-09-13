@@ -73,3 +73,15 @@ variable "tags" {
   description = "Tags"
   default     = {}
 }
+
+variable "allowed_methods" {
+  type        = "list"
+  description = "Allowed methods"
+  default     = ["GET", "HEAD"]
+}
+
+variable "cached_methods" {
+  type        = "list"
+  description = "Cached methods"
+  default     = ["GET", "HEAD"]
+}
