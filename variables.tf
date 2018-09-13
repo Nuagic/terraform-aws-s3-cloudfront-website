@@ -50,6 +50,12 @@ variable index_document {
   default     = "index.html"
 }
 
+variable cors_rule {
+  type        = "list"
+  description = "CORS rules"
+  default     = []
+}
+
 variable error_document {
   type        = "string"
   description = "HTML to show on 404"

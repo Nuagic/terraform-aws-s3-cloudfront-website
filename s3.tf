@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "main" {
     error_document = "${var.error_document}"
     routing_rules  = "${var.routing_rules}"
   }
-
+  cors_rule = ["${var.cors_rule}"]
   force_destroy = "${var.force_destroy}"
 
   tags = "${merge("${var.tags}",map("Name", "${var.fqdn}"))}"
