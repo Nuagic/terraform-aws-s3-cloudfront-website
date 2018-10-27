@@ -3,6 +3,12 @@ variable "fqdn" {
   description = "The FQDN of the website and also name of the S3 bucket"
 }
 
+variable "aliases" {
+  type        = "list"
+  default     = []
+  description = "Aliases of the website"
+}
+
 variable "force_destroy" {
   type        = "string"
   description = "The force_destroy argument of the S3 bucket"

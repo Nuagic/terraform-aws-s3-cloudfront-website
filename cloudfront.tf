@@ -50,7 +50,7 @@ resource "aws_cloudfront_distribution" "main" {
     response_page_path    = "/${var.error_document}"
   }
 
-  aliases = ["${var.fqdn}"]
+  aliases = ["${var.fqdn}", "${var.aliases}"]
 
   price_class = "PriceClass_100"
 
